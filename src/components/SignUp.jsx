@@ -13,7 +13,7 @@ function SignUp() {
     // function for post user-
     async function postUser(user) {
 
-        await axios.post('http://localhost:5000/api/users', user)
+        await axios.post('https://backend-1-lk99.onrender.com/api/users', user)
             .then((response) => { setMessage(response.data) })
             .catch((err) => { setError(err.message) });
         nameRef.current.value = ''
@@ -76,6 +76,7 @@ function SignUp() {
         </>
     )
 }
+
 
 
 export default SignUp;
