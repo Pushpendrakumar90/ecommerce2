@@ -14,7 +14,7 @@ export default function AllUser() {
   //all users 
   async function getUser() {
     try {
-      let response = await axios.get('http://localhost:5000/api/users/')
+      let response = await axios.get('https://backend-1-lk99.onrender.com/api/users/')
       setUsers(response.data.users)
       setError(null)
       console.log(response.data.users)
@@ -31,7 +31,7 @@ useEffect(()=>{
 async function deleteUser(id){
 let sure = window.confirm('are you sure delete user' + id);
 if(sure){
-  await axios.delete('http://localhost:5000/api/users/'+ id);
+  await axios.delete('https://backend-1-lk99.onrender.com/api/users/'+ id);
   getbyId();
   getUser();
 }
@@ -52,7 +52,7 @@ function getVal() {
   async function getbyId() {
     try {
       setOneUsers(null)
-      let response = await axios.get(`http://localhost:5000/api/users/${search}`)
+      let response = await axios.get(`https://backend-1-lk99.onrender.com/api/users/${search}`)
       setOneUsers(response.data)
       setOneError(null)
       console.log(response.data)
@@ -142,3 +142,4 @@ function getVal() {
     </>
   ) 
 }
+
