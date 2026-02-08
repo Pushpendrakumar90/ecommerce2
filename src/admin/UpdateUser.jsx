@@ -24,7 +24,7 @@ export default function UpdateUser() {
         try {
 
             setOneUsers(null)
-            let response = await axios.get(`http://localhost:5000/api/users/${id}`)
+            let response = await axios.get(`https://backend-1-lk99.onrender.com/api/users/${id}`)
             setOneUsers(response.data)
             console.log(response.data);
             
@@ -98,3 +98,4 @@ export default function UpdateUser() {
         </>
     )
 }
+
