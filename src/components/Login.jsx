@@ -20,7 +20,7 @@ const Login = () => {
 
   const loginPost = async (newUser) => {
     try {
-      let res = await axios.post('http://localhost:5000/api/users/login', newUser)
+      let res = await axios.post('https://backend-1-lk99.onrender.com/api/users/login', newUser)
       setSession(res.data);
       setLogin(true);
 
@@ -105,6 +105,7 @@ const Login = () => {
 }
 
 export default Login
+
 
 
 
