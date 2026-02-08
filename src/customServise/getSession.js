@@ -6,11 +6,12 @@ const getSession = async()=> {
     if(!localUserName)
         return null;
      
-    let res = await axios.post(`http://localhost:5000/api/users/getsession/${localUserName}`)
+    let res = await axios.post(`https://backend-1-lk99.onrender.com/api/users/getsession/${localUserName}`)
     return (
         res.data
     )
 }
+
 
 
 export default getSession;
