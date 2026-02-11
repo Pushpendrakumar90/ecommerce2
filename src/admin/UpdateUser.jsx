@@ -38,7 +38,7 @@ export default function UpdateUser() {
     // function for post user-
     async function updateuser(user) {
 
-         axios.put('http://localhost:5000/api/users/'+id, user)
+         axios.put('https://backend-1-lk99.onrender.com/api/users/'+id, user)
             .then((response) => { setMessage(response.data) })
             .catch((err) => { setError(err.message) });
             nameRef.current.value = ''
@@ -98,4 +98,5 @@ export default function UpdateUser() {
         </>
     )
 }
+
 
